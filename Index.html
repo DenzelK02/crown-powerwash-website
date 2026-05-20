@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Powerwash, LLC</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #081120;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #081120, #0d2a52, #0b1626);
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .hero-text {
+            flex: 1 1 450px;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .tagline {
+            display: inline-block;
+            background-color: rgba(255, 215, 0, 0.12);
+            color: #f5d76e;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #dbe4f0;
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: #f5d76e;
+            color: #081120;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .contact-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-box {
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 16px;
+            min-width: 220px;
+        }
+
+        .contact-box h3 {
+            font-size: 13px;
+            color: #c7d2df;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-box p,
+        .contact-box a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            flex: 1 1 380px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 430px;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #cfd8e3;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #0f1c30;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #f5d76e;
+        }
+
+        .booking-box,
+        .contact-section {
+            background-color: #0f1c30;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .booking-box h2,
+        .contact-section h2 {
+            margin-bottom: 12px;
+        }
+
+        .booking-box p,
+        .contact-section p {
+            color: #d7e0ea;
+            margin-bottom: 18px;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #b7c3d0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="tagline">Residential &amp; Commercial Exterior Cleaning</div>
+                <h1>Crown Powerwash, LLC</h1>
+                <p>
+                    Professional exterior cleaning for homes and businesses. Contact us directly for pricing,
+                    quotes, and booking.
+                </p>
+
+                <div class="button-group">
+                    <a class="btn btn-primary" href="tel:6512484180">Call 651-248-4180</a>
+                    <button class="btn btn-secondary" onclick="showBookingMessage()">Book / Get Pricing</button>
+                </div>
+
+                <div class="contact-boxes">
+                    <div class="contact-box">
+                        <h3>Phone</h3>
+                        <a href="tel:6512484180">651-248-4180</a>
+                    </div>
+                    <div class="contact-box">
+                        <h3>Address</h3>
+                        <p>3645 112th Cir NE, Blaine, MN 55449</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="image.jpg" alt="Crown Powerwash business card">
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide residential and commercial exterior cleaning services.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Exterior Soft Wash</h3>
+                    <p>Safe exterior cleaning for your property.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Driveway</h3>
+                    <p>Driveway washing to help remove dirt and buildup.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Soft Wash Decks</h3>
+                    <p>Deck cleaning using a softer washing method.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sidings</h3>
+                    <p>Exterior siding cleaning for a better look.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Windows</h3>
+                    <p>Window exterior cleaning for a cleaner finish.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Walkways</h3>
+                    <p>Walkway cleaning to improve curb appeal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="booking-box">
+                <h2>Booking and Pricing</h2>
+                <p>
+                    We do not take online payments on this website. For pricing, quotes, and scheduling,
+                    please contact us directly.
+                </p>
+                <div class="button-group">
+                    <a class="btn btn-primary" href="tel:6512484180">Contact 651-248-4180</a>
+                    <button class="btn btn-secondary" onclick="showBookingMessage()">Ask About Pricing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container contact-section">
+            <h2>Contact Us</h2>
+            <p>Reach out for quotes, questions, and booking information.</p>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> <a href="tel:6512484180" style="color:#f5d76e; text-decoration:none;">651-248-4180</a></p>
+                <p><strong>Address:</strong> 3645 112th Cir NE, Blaine, MN 55449</p>
+                <p><strong>Service Type:</strong> Residential &amp; Commercial Exterior Cleaning</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Crown Powerwash, LLC. All rights reserved.
+    </footer>
+
+    <script>
+        function showBookingMessage() {
+            alert("Please contact us at 651-248-4180 for pricing and booking.");
+        }
+    </script>
+</body>
+</html>
